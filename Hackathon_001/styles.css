@@ -1,0 +1,156 @@
+body { 
+    margin:0px;
+    background-color: black;
+}
+.wrapper_grid{
+    display: grid;
+    grid-template-rows: auto 1fr 300px;
+    grid-template-columns: repeat(12, 1fr); 
+    grid-template-areas: 
+    "h h h h h h h h h h h h"
+    "m m m m m m m m m m m m"
+    "f f f f f f f f f f f f"
+    ;
+}
+.header{
+    grid-area: h;
+}
+.main{
+    grid-area: m;
+}
+.footer{
+    grid-area: f;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li{
+    float:left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover{
+    background-color: #111;
+}
+.active{
+    background-color: #04AA6D;
+}
+h1{ 
+    text-align: center;
+}
+h2{
+    margin-left: 20px;
+}
+h3{
+    margin-left: 10px;
+}
+iframe{
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    height: 300px;
+}
+main{
+    text-align:left;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: darkgray;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+p{
+margin: 20px;
+}
+figcaption{
+    text-align: center;
+    color: rgb(39, 37, 37);
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+footer{
+    background-color: darkgray;
+}
+.footer_info{
+    text-align: center;
+    margin: 25px;
+    color: #333;
+}
+* {
+    box-sizing: border-box; 
+   }
+   .wrapper_flex{
+     display: flex;
+     background-color: rgb(44, 44, 37);
+     border-radius: 3px;
+     padding: 1.8em;
+   }
+   .message {
+     display: flex;
+     flex-direction: column;
+     order: 2;
+   }
+   .message > textarea {
+    flex: 1; 
+    min-width: 18em;
+   }
+   .contact {
+        flex: 1; 
+     order: 1;
+        margin-right: 2em; 
+   }
+   .contact input {
+     width: 100%;
+   }
+   .contact input,
+   .contact button {
+     padding: 1em;
+     margin-bottom: 1em;
+   }
+   .contact button {
+    background: rgb(5, 5, 5);
+    color: white;
+    border: 0;
+   }
+@media (min-width:1024px){
+    .wrapper_grid{
+    height: 1000px;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 3px;
+    grid-template-areas: 
+    "h h m m m m m m m m m m"
+    "h h f f f f f f f f f f"
+    ;
+    }   
+    iframe{
+        width: 1080px;
+        height: 720px;
+    }
+    figcaption{
+        margin: 15px;
+    }
+    li{
+        float: none;
+    }
+    .header{
+        background-color: #333;
+    }
+    .voc_img{
+        width: 20%;
+        margin-top: 125px;
+    }
+}
